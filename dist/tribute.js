@@ -1527,8 +1527,8 @@ function () {
       var parentHeight = this.tribute.menuContainer ? this.tribute.menuContainer.offsetHeight : this.getDocument().body.offsetHeight;
 
       if (menuIsOffScreen.bottom) {
-        var parentRect = this.tribute.menuContainer ? this.tribute.menuContainer.getBoundingClientRect() : this.getDocument().body.getBoundingClientRect();
-        var scrollStillAvailable = parentHeight - (windowHeight - parentRect.top);
+        var parentRect = this.tribute.menuContainer ? this.tribute.menuContainer.pageYOffset : window.pageYOffset;
+        var scrollStillAvailable = parentHeight - (parentRect);
         coordinates.top = 'auto';
         coordinates.bottom = scrollStillAvailable + (windowHeight - rect.top);
       }
