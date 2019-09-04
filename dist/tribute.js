@@ -1143,8 +1143,8 @@ function () {
           text += _textSuffix;
           this.pasteHtml(text, info.mentionPosition, info.mentionPosition + info.mentionText.length + !this.tribute.autocompleteMode);
         }
-          // this was causing cursor to move to beginning of the 'input' in Chrome, rather than after the insertion
-//         context.element.dispatchEvent(replaceEvent);
+        
+        context.element.dispatchEvent(replaceEvent);
       }
     }
   }, {
