@@ -1144,7 +1144,7 @@ function () {
           this.pasteHtml(text, info.mentionPosition, info.mentionPosition + info.mentionText.length + !this.tribute.autocompleteMode);
         }
 
-        context.element.dispatchEvent(replaceEvent);
+//         context.element.dispatchEvent(replaceEvent);
       }
     }
   }, {
